@@ -1,0 +1,71 @@
+/**
+ * Description【作用描述】
+ *  常用变量定义
+ *
+ *
+ *  五音阶
+ *  五声音阶的意思就是按五度的相生顺序，从宫音开始到羽音，依次为：宫—商—角—徵—羽
+ *  如按音高顺序排列，即为：1 2 3 5 6 宫 商 角 徵（zhǐ） 羽。唐代时使用“合、四、乙、尺、工”。
+ *  宫、商、角、徵、羽，相当于现在首调唱名的『do、re、mi、sol、la 』
+ *
+ *  宫为君，商为臣，角为民，徵为事，羽为物
+ *  宫 - 古人通常以宫音作为音阶的第一级音，相当于今首调唱名中的do音，也是最重要的一个音级，“宫”音为五音之主、五音之君，统帅众音
+ *  商 - 为五音之第二级，相当于今首调唱名中的re音，古人认为，“商，属金，臣之象”，“臣而和之”
+ *  角 - 为五音之第三级，相当于今首调唱名中的mi音，古人以为，“角属木，民之象”
+ *  徵 - 为五音之第四级，相当于今首调唱名中的sol音，古人以为，“徵属火，事之象”
+ *  羽 - 五音之之第五级，相当于今首调唱名中的la音，古人以为，“羽属水，物之象”
+ *
+ */
+
+/* Color */
+$white: rgba(255, 255, 255, 1);
+$black: rgba(0, 0, 0, 1);
+
+/**
+ * 字体
+ * 优先使用系统默认的界面字体，同时提供了一套利于屏显的备用字体库，来维护在不同平台以及浏览器的显示
+ * 参考：https://ant.design/docs/spec/font-cn
+ */
+$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', SimSun, sans-serif;
+
+/**
+ * 字阶与行高
+ * 受到 5 音阶『do、re、mi、sol、la』以及自然律的启发定义了 10 个不同尺寸的字体以及与之相对应的行高
+ *
+ * Font Size    12  14  16  20  24  30  38  46  56  68
+ * Line Height  20  22  24  28  32  38  46  54  64  76
+ *
+ * 建议的主要字体为 14，与之对应的行高为 22
+ * 建议在一个系统设计中（展示型页面除外），字阶的选择尽量控制在 3-5 种之间，保持克制的原则
+ */
+$font-size-do: 12px;
+$font-size-re: 14px;
+$font-size-mi: 16px;
+$font-size-sol: 20px;
+$font-size-la: 24px;
+
+$line-height-do: 20px;
+$line-height-re: 22px;
+$line-height-mi: 24px;
+$line-height-sol: 28px;
+$line-height-la: 32px;
+
+/**
+ * 字重
+ * 字重的选择同样基于秩序、稳定、克制的原则。
+ * 多数情况下，只出现 regular 以及 medium 的两种字体重量，分别对应代码中的 400 和 500。
+ * 在英文字体加粗的情况下会采用 semibold 的字体重量，对应代码中的 600
+ */
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+
+/**
+ * 间距
+ * 通过『小号间距』、『中号间距』、『大号间距』这三种规格来划分信息层次
+ * 三种规格分别为：8px（小号间距）、16px（中号间距）、24px（大号间距）
+ * 可以通过加减『基础间距』的倍数，来拉开信息层次，y=8+8*n。其中，n>=0，y 是纵向间距，8 是『基础间距』
+ */
+$gutter-sm: 8px;
+$gutter-md: 16px;
+$gutter-lg: 24px;

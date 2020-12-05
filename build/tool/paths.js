@@ -1,5 +1,8 @@
 const path = require('path')
 
+// 根目录
+const root = path.resolve(__dirname, './')
+
 // 基础目录
 const src = path.resolve(__dirname, '../../src')
 
@@ -13,5 +16,6 @@ const publicPath = `${cdn}/static/`
 module.exports = {
   src,
   outPath,
-  publicPath
+  publicPath,
+  root
 }
