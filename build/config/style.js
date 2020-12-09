@@ -1,5 +1,5 @@
 const paths = require('../tool/paths')
-const path = require('path')
+const isPro = require('../tool/isPro')
 
 module.exports = ({ config }) => {
   return () => {
@@ -15,12 +15,12 @@ module.exports = ({ config }) => {
           .end()
         .use('css')
           .loader('css-loader')
-          .options({ sourceMap: true, importLoaders: 1 })
+          .options({ sourceMap: !isPro, importLoaders: 1 })
           .end()
         .use('postcss')
           .loader('postcss-loader')
           .options({
-            sourceMap: true
+            sourceMap: !isPro 
           })
   }
 }

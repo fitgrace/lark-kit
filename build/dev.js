@@ -10,6 +10,24 @@ const config = require('./base')()
 
 config.devtool('eval-source-map')
 
+config.module
+  .rule('js')
+    .test(/\.js$/)
+    /**
+     * enforce: 'pre' 表示预处理
+     * 因为我们只是希望 eslint 来审查我们的代码，并不是去改变它，
+     * 在真正的 loader(比如：vue-loader)发挥作用前用 eslint 去检查代码。
+     */
+    .enforce('pre')
+    .include
+      .add(paths.src)
+      .end()
+    .use('eslint')
+      .loader('eslint-loader')
+      .options({
+        fix: true
+      })
+
 config.devServer
   // 指定服务器资源的根目录，如果不写入 contentBase 的值，那么 contentBase 默认是项目的目录
   .contentBase(paths.publicPath)
