@@ -8,6 +8,7 @@
 const stylelintConfig = {
   extends: [
     'stylelint-config-standard',
+    'stylelint-config-prettier'
   ],
 
   plugins: [

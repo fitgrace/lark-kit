@@ -249,6 +249,24 @@ module.exports = {
 }
 ```
 
+禁用所有与格式相关的 Stylelint 规则，解决 prettier 与 stylelint 规则冲突，确保将其放在 extends 队列最后，这样它将覆盖其他配置
+
+```javascript
+// 安装
+$ yarn add stylelint-config-prettier --dev
+
+
+// stylelint.config.js
+module.exports = {
+  // ...
+
+  extends: [
+    'stylelint-config-standard',
+    'stylelint-config-prettier'
+  ],
+}
+```
+
 在根目录创建 prettier.config.js 文件，在其中添加 Prettier 规则
 
 ```javascript
