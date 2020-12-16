@@ -18,7 +18,7 @@ module.exports = ({ config }) => {
 
     // 入口
     config.entry('index')
-      .add('./index.js')
+      .add('./index.ts')
       .end()
 
     // 出口

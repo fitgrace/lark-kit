@@ -8,6 +8,24 @@ const local = `http://localhost:${PORT}`
 
 const config = require('./base')()
 
+config.module
+  .rule('ts')
+    .test(/\.(ts|js)x?$/)
+    /**
+     * enforce: 'pre' 表示预处理
+     * 因为我们只是希望 eslint 来审查我们的代码，并不是去改变它，
+     * 在真正的 loader(比如：vue-loader)发挥作用前用 eslint 去检查代码。
+     */
+    .enforce('pre')
+    .include
+      .add(paths.src)
+      .end()
+    .use('eslint')
+      .loader('eslint-loader')
+      .options({
+        fix: true
+      })
+
 config.devtool('eval-source-map')
 
 config.devServer

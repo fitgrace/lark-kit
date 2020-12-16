@@ -40,4 +40,4 @@ const postcssConfig = {
   }
 };
 
-module.exports = postcssConfig
+module.exports = postcssConfig;
