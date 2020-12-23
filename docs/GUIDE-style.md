@@ -46,7 +46,7 @@ url-loader 工作分两种情况：
 2. 文件大小大于 limit，url-loader 会调用 file-loader 进行处理，参数也会直接传给 file-loader
 
 
-#### build/config/img.js
+#### build/config/assets.js
 
 ```javascript
 const paths = require('../tool/paths')
