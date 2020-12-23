@@ -4,10 +4,7 @@ body {
   background-color: $white;
   font-family: $font-family;
 
-  .slider {
-    display: block;
-    height: 400px;
-    background: url('../asset/img/slider.jpg') no-repeat;
-    font-size: $font-size-mi;
+  h1 {
+    color: blue;
   }
 }

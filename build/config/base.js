@@ -18,7 +18,7 @@ module.exports = ({ config }) => {
 
     // 入口
     config.entry('index')
-      .add('./index.ts')
+      .add('./index.tsx')
       .end()
 
     // 出口
@@ -26,5 +26,14 @@ module.exports = ({ config }) => {
       .path(paths.outPath)
       .filename(filename)
       .publicPath(paths.publicPath)
+
+    // 设置模块如何被解析
+    config.resolve
+      .extensions
+        .merge(['.ts', '.tsx', '.js', '.jsx'])
+        .end()
+      .alias
+        .set('@', paths.src)
+        .end()
   }
 }

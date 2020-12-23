@@ -10,8 +10,9 @@ module.exports = {
 
   extends: [
     'alloy',
+    'alloy/react',
     'alloy/typescript',
-    'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended'
   ],
@@ -23,7 +24,11 @@ module.exports = {
 
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 6, // 也就是ES6语法支持的意思
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    },
     project: './tsconfig.json'
   },
 
@@ -34,6 +39,8 @@ module.exports = {
   rules: {
     'no-console': 0,
     'import/no-unresolved': 0,
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
     'prettier/prettier': 'error'
   },
 };

@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "moduleResolution": "node",
+    "jsx": "react",
     "allowJs": true,
     "noEmit": true,
     "strict": true,
@@ -10,7 +11,7 @@
     "types": ["webpack-env", "node"]
   },
   "include": [
-    "src/**/*"
+    "./src/**/*"
   ],
   "exclude": ["node_modules"]
 }
